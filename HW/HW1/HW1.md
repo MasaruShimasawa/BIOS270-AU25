@@ -199,7 +199,8 @@ Answer the following questions:
 **HW Part D (optional)**
 - Screenshot of PR link on Jira task
 
-   _Attach image(s) here_
+   <img width="1470" height="956" alt="Screenshot 2025-11-17 at 11 36 10 PM" src="https://github.com/user-attachments/assets/6cd1dbf5-4b91-4646-aeec-027e9a40ce61" />
+
 
 
 ---
