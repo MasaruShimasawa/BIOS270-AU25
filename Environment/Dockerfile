@@ -1,50 +1,27 @@
-# Base image: includes Micromamba (a fast, minimal Conda) preinstalled
-FROM mambaorg/micromamba:jammy
+# 1. あなたのv1イメージをベースにする
+FROM scr.svc.stanford.edu/masarus/containers/bioinfo_example:latest
 
+# --- これ以降のコマンドは 'mambauser' として実行されます ---
+
+# 2. 'curl' を 'base' 環境にインストール (これはOK)
+RUN micromamba install -y -p /opt/conda -c conda-forge curl ca-certificates
+
+# 3. 'parasail' を 'bioinfo_example' 環境にインストール (これもOK)
+RUN micromamba run -n bioinfo_example pip install parasail
+
+# 4. 'curl' を使って /tmp にダウンロード (これもOK)
+RUN micromamba run -n base \
+    curl -L https://github.com/sokrypton/reseek/releases/download/v1.0.0/reseek-linux-amd64 -o /tmp/reseek
+
+# 5. 【修正点 1/3】
+# これからシステムフォルダを操作するため、'root' (管理者) ユーザーに切り替える
 USER root
 
-# Build-time variables: URL for an example FASTA and the name of the Conda environment
-ARG RANDOM_FASTA=https://raw.githubusercontent.com/biopython/biopython/master/Doc/examples/ls_orchid.fasta
-ARG MAMBA_ENV_NAME=bioinfo_example
+# 6. 【修正点 2/3】
+# 'root' として /tmp/reseek を /usr/local/bin/ に移動し、権限を付与する
+RUN mv /tmp/reseek /usr/local/bin/reseek \
+    && chmod +x /usr/local/bin/reseek
 
-# Install minimal OS dependencies needed for downloads and installers; then clean apt metadata to keep the image small
-RUN apt-get update && apt-get install -y --no-install-recommends curl ca-certificates tar unzip vim nano\
-    && rm -rf /var/lib/apt/lists/* 
-
-# Install rclone
-RUN curl -fsSL https://rclone.org/install.sh | bash 
-
-# Install code-server (VS Code in the browser)
-RUN curl -fsSL https://code-server.dev/install.sh | bash
-
-USER $MAMBA_USER
-
-# Set the working directory inside the container
-WORKDIR /workspace
-
-# Copy the environment YAML and example scripts into the container
-COPY --chown=$MAMBA_USER:$MAMBA_USER . /workspace/
-
-# Fetch an example FASTA into the workspace
-RUN echo "Downloading example FASTA from: $RANDOM_FASTA"; \
-    curl -fsSL "$RANDOM_FASTA" -o /workspace/example.fasta
-
-# Create the Conda environment from YAML, then remove package caches to shrink the final image
-RUN micromamba create -y -n "${MAMBA_ENV_NAME}" -f /workspace/bioinfo_example.yaml && \
-    # Install the new package we want to add (this is an example, in practice you would want all your packages in the YAML file)
-    micromamba install -n bioinfo_example -c conda-forge -c bioconda -c defaults -y rpy2 && \
-    micromamba clean -a -y
-
-# Make the new environment the default at runtime and ensure its binaries are first on PATH
-ENV MAMBA_DEFAULT_ENV=${MAMBA_ENV_NAME}
-ENV PATH=/opt/conda/envs/${MAMBA_ENV_NAME}/bin:$PATH
-
-
-# Run example scripts to test the environment
-RUN python /workspace/scripts/python_example.py && \
-    python /workspace/scripts/rpy2_example.py && \
-    Rscript /workspace/scripts/r_example.R \
-    && echo "All example scripts ran successfully!"
-
-# Default action when the container starts: open an interactive Bash shell
-CMD ["/bin/bash"]
+# 7. 【修正点 3/3】
+# セキュリティのため、デフォルトの 'mambauser' に戻す
+USER mambauser
