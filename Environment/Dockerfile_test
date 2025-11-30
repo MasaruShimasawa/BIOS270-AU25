@@ -1,0 +1,9 @@
+
+FROM scr.svc.stanford.edu/masarus/containers/bioinfo_example:latest
+
+RUN micromamba install -n bioinfo_example -y -c conda-forge curl
+
+RUN micromamba run -n bioinfo_example curl -L -o /opt/conda/envs/bioinfo_example/bin/reseek https://github.com/rcedgar/reseek/releases/download/v2.7/reseek-v2.7-linux-x86 \
+    && chmod +x /opt/conda/envs/bioinfo_example/bin/reseek
+
+RUN micromamba run -n bioinfo_example pip install parasail
