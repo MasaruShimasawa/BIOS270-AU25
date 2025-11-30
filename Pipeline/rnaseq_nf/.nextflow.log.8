@@ -1,0 +1,210 @@
+Nov-30 05:03:29.377 [main] DEBUG nextflow.cli.Launcher - $> nextflow run rnaseq.nf -params-file configs/params.yaml -c configs/nextflow.config -profile slurm -resume
+Nov-30 05:03:29.509 [main] DEBUG nextflow.cli.CmdRun - N E X T F L O W  ~  version 25.10.0
+Nov-30 05:03:29.587 [main] DEBUG nextflow.config.ConfigBuilder - User config file: /scratch/users/masarus/repos/BIOS270-AU25/Pipeline/rnaseq_nf/configs/nextflow.config
+Nov-30 05:03:29.589 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /scratch/users/masarus/repos/BIOS270-AU25/Pipeline/rnaseq_nf/configs/nextflow.config
+Nov-30 05:03:29.616 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `slurm`
+Nov-30 05:03:30.350 [main] DEBUG nextflow.config.ConfigBuilder - Available config profiles: [slurm, local]
+Nov-30 05:03:30.399 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; embedded=false; plugins-dir=/home/users/masarus/.nextflow/plugins; core-plugins: nf-amazon@3.4.1,nf-azure@1.20.2,nf-cloudcache@0.5.0,nf-codecommit@0.5.0,nf-console@1.3.0,nf-google@1.23.3,nf-k8s@1.2.2,nf-tower@1.17.1,nf-wave@1.16.1
+Nov-30 05:03:30.413 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+Nov-30 05:03:30.414 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+Nov-30 05:03:30.417 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.12.0 in 'deployment' mode
+Nov-30 05:03:30.431 [main] DEBUG nextflow.util.RetryConfig - Missing nextflow session - using default retry config
+Nov-30 05:03:30.578 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+Nov-30 05:03:30.580 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
+Nov-30 05:03:30.580 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins resolved requirement=[]
+Nov-30 05:03:30.595 [main] DEBUG n.secret.LocalSecretsProvider - Secrets store: /home/users/masarus/.nextflow/secrets/store.json
+Nov-30 05:03:30.598 [main] DEBUG nextflow.secret.SecretsLoader - Discovered secrets providers: [nextflow.secret.LocalSecretsProvider@2539cd1c] - activable => nextflow.secret.LocalSecretsProvider@2539cd1c
+Nov-30 05:03:30.603 [main] DEBUG nextflow.cli.CmdRun - Applied DSL=2 from script declaration
+Nov-30 05:03:30.619 [main] DEBUG nextflow.cli.CmdRun - Launching `rnaseq.nf` [mad_leavitt] DSL2 - revision: b2d1d5ac9e
+Nov-30 05:03:30.666 [main] DEBUG nextflow.Session - Session UUID: 1e62e99d-fbc0-4982-b3f7-9d896fb2476c
+Nov-30 05:03:30.667 [main] DEBUG nextflow.Session - Run name: mad_leavitt
+Nov-30 05:03:30.667 [main] DEBUG nextflow.Session - Executor pool size: 80
+Nov-30 05:03:30.676 [main] DEBUG nextflow.file.FilePorter - File porter settings maxRetries=3; maxTransfers=50; pollTimeout=null
+Nov-30 05:03:30.681 [main] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'FileTransfer' minSize=10; maxSize=240; workQueue=LinkedBlockingQueue[-1]; allowCoreThreadTimeout=false
+Nov-30 05:03:30.700 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 25.10.0 build 10289
+  Created: 22-10-2025 16:26 UTC 
+  System: Linux 6.14.0-27-generic
+  Runtime: Groovy 4.0.28 on OpenJDK 64-Bit Server VM 21.0.9+10-Ubuntu-124.04
+  Encoding: UTF-8 (UTF-8)
+  Process: 4164009@rice-01 [127.0.1.1]
+  CPUs: 80 - Mem: 187.4 GB (15 GB) - Swap: 8 GB (6.7 GB)
+Nov-30 05:03:30.784 [main] DEBUG nextflow.Session - Work-dir: /scratch/users/masarus/repos/BIOS270-AU25/Pipeline/rnaseq_nf/work [nfs]
+Nov-30 05:03:30.818 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
+Nov-30 05:03:30.829 [main] DEBUG nextflow.Session - Observer factory (v2): LinObserverFactory
+Nov-30 05:03:30.832 [main] DEBUG nextflow.Session - Observer factory (v2): DefaultObserverFactory
+Nov-30 05:03:30.876 [main] DEBUG nextflow.cache.CacheFactory - Using Nextflow cache factory: nextflow.cache.DefaultCacheFactory
+Nov-30 05:03:30.885 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 81; maxThreads: 1000
+Nov-30 05:03:31.045 [main] DEBUG nextflow.Session - Session start
+Nov-30 05:03:31.060 [main] DEBUG nextflow.Session - Report file already exists: /farmshare/user_data/masarus/repos/BIOS270-AU25/Pipeline/SRP628437_nf/report.html -- enable the 'report.overwrite' option in your config file to overwrite existing files
+nextflow.exception.AbortOperationException: Report file already exists: /farmshare/user_data/masarus/repos/BIOS270-AU25/Pipeline/SRP628437_nf/report.html -- enable the 'report.overwrite' option in your config file to overwrite existing files
+	at nextflow.trace.ReportObserver.onFlowCreate(ReportObserver.groovy:119)
+	at nextflow.Session$_notifyFlowCreate_lambda34.doCall(Session.groovy:1107)
+	at nextflow.Session.notifyEvent(Session.groovy:1151)
+	at nextflow.Session.notifyFlowCreate(Session.groovy:1107)
+	at nextflow.Session.start(Session.groovy:596)
+	at nextflow.script.ScriptRunner.execute(ScriptRunner.groovy:133)
+	at nextflow.cli.CmdRun.run(CmdRun.groovy:428)
+	at nextflow.cli.Launcher.run(Launcher.groovy:515)
+	at nextflow.cli.Launcher.main(Launcher.groovy:675)
+Nov-30 05:03:31.062 [main] DEBUG nextflow.trace.TraceFileObserver - Workflow started -- trace file: /farmshare/user_data/masarus/repos/BIOS270-AU25/Pipeline/SRP628437_nf/trace.txt
+Nov-30 05:03:31.064 [main] DEBUG nextflow.Session - Trace file already exists: /farmshare/user_data/masarus/repos/BIOS270-AU25/Pipeline/SRP628437_nf/trace.txt -- enable the 'trace.overwrite' option in your config file to overwrite existing files
+nextflow.exception.AbortOperationException: Trace file already exists: /farmshare/user_data/masarus/repos/BIOS270-AU25/Pipeline/SRP628437_nf/trace.txt -- enable the 'trace.overwrite' option in your config file to overwrite existing files
+	at nextflow.trace.TraceHelper.newFileWriter(TraceHelper.groovy:67)
+	at nextflow.trace.TraceFileObserver.onFlowCreate(TraceFileObserver.groovy:174)
+	at nextflow.Session$_notifyFlowCreate_lambda34.doCall(Session.groovy:1107)
+	at nextflow.Session.notifyEvent(Session.groovy:1151)
+	at nextflow.Session.notifyFlowCreate(Session.groovy:1107)
+	at nextflow.Session.start(Session.groovy:596)
+	at nextflow.script.ScriptRunner.execute(ScriptRunner.groovy:133)
+	at nextflow.cli.CmdRun.run(CmdRun.groovy:428)
+	at nextflow.cli.Launcher.run(Launcher.groovy:515)
+	at nextflow.cli.Launcher.main(Launcher.groovy:675)
+Caused by: java.nio.file.FileAlreadyExistsException: /farmshare/user_data/masarus/repos/BIOS270-AU25/Pipeline/SRP628437_nf/trace.txt
+	at java.base/sun.nio.fs.UnixException.translateToIOException(UnixException.java:94)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:106)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:111)
+	at java.base/sun.nio.fs.UnixFileSystemProvider.newByteChannel(UnixFileSystemProvider.java:261)
+	at java.base/java.nio.file.spi.FileSystemProvider.newOutputStream(FileSystemProvider.java:482)
+	at java.base/java.nio.file.Files.newOutputStream(Files.java:228)
+	at java.base/java.nio.file.Files.newBufferedWriter(Files.java:3001)
+	at nextflow.trace.TraceHelper.newFileWriter(TraceHelper.groovy:64)
+	... 9 common frames omitted
+Nov-30 05:03:31.476 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Nov-30 05:03:31.884 [main] WARN  nextflow.script.ScriptBinding - Access to undefined parameter `index` -- Initialise it to a default value eg. `params.index = some_value`
+Nov-30 05:03:31.897 [main] INFO  nextflow.Nextflow - No index provided. Running SALMON_INDEX using: /farmshare/home/classes/bios/270/data/ecoli_ref/GCF_000401755.1_Escherichia_coli_ATCC_25922_cds_from_genomic.fna
+Nov-30 05:03:31.921 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+Nov-30 05:03:31.921 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+Nov-30 05:03:31.934 [main] DEBUG nextflow.executor.Executor - [warm up] executor > slurm
+Nov-30 05:03:31.965 [main] DEBUG n.processor.TaskPollingMonitor - Creating task monitor for executor 'slurm' > capacity: 50; pollInterval: 5s; dumpInterval: 5m 
+Nov-30 05:03:31.968 [main] DEBUG n.processor.TaskPollingMonitor - >>> barrier register (monitor: slurm)
+Nov-30 05:03:31.971 [main] DEBUG n.executor.AbstractGridExecutor - Creating executor 'slurm' > queue-stat-interval: 1m
+Nov-30 05:03:32.019 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'SALMON_INDEX': maxForks=0; fair=false; array=0
+Nov-30 05:03:32.118 [main] DEBUG nextflow.script.ScriptRunner - Parsed script files:
+  Script_503b7726b3954b55: /scratch/users/masarus/repos/BIOS270-AU25/Pipeline/rnaseq_nf/modules/diffexp/deseq2.nf
+  Script_f36d5ce0c489ecd8: /scratch/users/masarus/repos/BIOS270-AU25/Pipeline/rnaseq_nf/modules/qc/fastqc.nf
+  Script_2c4927d0473648c2: /scratch/users/masarus/repos/BIOS270-AU25/Pipeline/rnaseq_nf/modules/pseudoalign/salmon.nf
+  Script_ed9bae48aa5ffda1: /scratch/users/masarus/repos/BIOS270-AU25/Pipeline/rnaseq_nf/modules/qc/trimgalore.nf
+  Script_be94c2d60b4bb485: /scratch/users/masarus/repos/BIOS270-AU25/Pipeline/rnaseq_nf/rnaseq.nf
+Nov-30 05:03:32.118 [main] DEBUG nextflow.Session - Session aborted -- Cause: Cannot cast object 'nextflow.script.ChannelOut@57927bc9' with class 'nextflow.script.ChannelOut' to class 'nextflow.Channel' due to: groovy.lang.GroovyRuntimeException: Could not find matching constructor for: nextflow.Channel(groovyx.gpars.dataflow.DataflowVariable)
+Nov-30 05:03:32.136 [main] DEBUG nextflow.Session - The following nodes are still active:
+  [operator] ifEmpty
+  [operator] splitCsv
+  [operator] map
+
+Nov-30 05:03:32.142 [main] INFO  nextflow.Nextflow - Pipeline finished. Results in: /farmshare/user_data/masarus/repos/BIOS270-AU25/Pipeline/SRP628437_nf
+Nov-30 05:03:32.148 [main] DEBUG n.trace.WorkflowStatsObserver - Workflow completed > WorkflowStats[succeededCount=0; failedCount=0; ignoredCount=0; cachedCount=0; pendingCount=0; submittedCount=0; runningCount=0; retriesCount=0; abortedCount=0; succeedDuration=0ms; failedDuration=0ms; cachedDuration=0ms;loadCpus=0; loadMemory=0; peakRunning=0; peakCpus=0; peakMemory=0; ]
+Nov-30 05:03:32.353 [main] DEBUG nextflow.trace.ReportObserver - Workflow completed -- rendering execution report
+Nov-30 05:03:33.016 [main] WARN  nextflow.trace.ReportObserver - Failed to render execution report -- see the log file for details
+nextflow.exception.AbortOperationException: Report file already exists: /farmshare/user_data/masarus/repos/BIOS270-AU25/Pipeline/SRP628437_nf/report.html -- enable the 'report.overwrite' option in your config file to overwrite existing files
+	at nextflow.trace.TraceHelper.newFileWriter(TraceHelper.groovy:67)
+	at nextflow.trace.ReportObserver.renderHtml(ReportObserver.groovy:243)
+	at nextflow.trace.ReportObserver.onFlowComplete(ReportObserver.groovy:129)
+	at nextflow.Session$_notifyFlowComplete_lambda39.doCall(Session.groovy:1121)
+	at nextflow.Session.notifyEvent(Session.groovy:1151)
+	at nextflow.Session.notifyFlowComplete(Session.groovy:1121)
+	at nextflow.Session.shutdown0(Session.groovy:779)
+	at nextflow.Session.abort(Session.groovy:834)
+	at nextflow.script.ScriptRunner.execute(ScriptRunner.groovy:150)
+	at nextflow.cli.CmdRun.run(CmdRun.groovy:428)
+	at nextflow.cli.Launcher.run(Launcher.groovy:515)
+	at nextflow.cli.Launcher.main(Launcher.groovy:675)
+Caused by: java.nio.file.FileAlreadyExistsException: /farmshare/user_data/masarus/repos/BIOS270-AU25/Pipeline/SRP628437_nf/report.html
+	at java.base/sun.nio.fs.UnixException.translateToIOException(UnixException.java:94)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:106)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:111)
+	at java.base/sun.nio.fs.UnixFileSystemProvider.newByteChannel(UnixFileSystemProvider.java:261)
+	at java.base/java.nio.file.spi.FileSystemProvider.newOutputStream(FileSystemProvider.java:482)
+	at java.base/java.nio.file.Files.newOutputStream(Files.java:228)
+	at java.base/java.nio.file.Files.newBufferedWriter(Files.java:3001)
+	at nextflow.trace.TraceHelper.newFileWriter(TraceHelper.groovy:64)
+	... 11 common frames omitted
+Nov-30 05:03:33.016 [main] DEBUG nextflow.trace.TraceFileObserver - Workflow completed -- saving trace file
+Nov-30 05:03:33.016 [main] DEBUG nextflow.Session - Cannot invoke "groovyx.gpars.agent.Agent.await()" because "this.writer" is null
+java.lang.NullPointerException: Cannot invoke "groovyx.gpars.agent.Agent.await()" because "this.writer" is null
+	at nextflow.trace.TraceFileObserver.onFlowComplete(TraceFileObserver.groovy:189)
+	at nextflow.Session$_notifyFlowComplete_lambda39.doCall(Session.groovy:1121)
+	at nextflow.Session.notifyEvent(Session.groovy:1151)
+	at nextflow.Session.notifyFlowComplete(Session.groovy:1121)
+	at nextflow.Session.shutdown0(Session.groovy:779)
+	at nextflow.Session.abort(Session.groovy:834)
+	at nextflow.script.ScriptRunner.execute(ScriptRunner.groovy:150)
+	at nextflow.cli.CmdRun.run(CmdRun.groovy:428)
+	at nextflow.cli.Launcher.run(Launcher.groovy:515)
+	at nextflow.cli.Launcher.main(Launcher.groovy:675)
+Nov-30 05:03:33.021 [Task monitor] DEBUG n.processor.TaskPollingMonitor - <<< barrier arrives (monitor: slurm) - terminating tasks monitor poll loop
+Nov-30 05:03:33.022 [main] ERROR nextflow.cli.Launcher - @unknown
+org.codehaus.groovy.runtime.typehandling.GroovyCastException: Cannot cast object 'nextflow.script.ChannelOut@57927bc9' with class 'nextflow.script.ChannelOut' to class 'nextflow.Channel' due to: groovy.lang.GroovyRuntimeException: Could not find matching constructor for: nextflow.Channel(groovyx.gpars.dataflow.DataflowVariable)
+	at org.codehaus.groovy.runtime.typehandling.DefaultTypeTransformation.continueCastOnSAM(DefaultTypeTransformation.java:413)
+	at org.codehaus.groovy.runtime.typehandling.DefaultTypeTransformation.continueCastOnNumber(DefaultTypeTransformation.java:326)
+	at org.codehaus.groovy.runtime.typehandling.DefaultTypeTransformation.castToType(DefaultTypeTransformation.java:244)
+	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:321)
+	at Script_be94c2d60b4bb485$_runScript_closure4$_closure8.doCall(Script_be94c2d60b4bb485:61)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
+	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:280)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1007)
+	at groovy.lang.Closure.call(Closure.java:433)
+	at groovy.lang.Closure.call(Closure.java:412)
+	at nextflow.script.WorkflowDef.run0(WorkflowDef.groovy:205)
+	at nextflow.script.WorkflowDef.run(WorkflowDef.groovy:189)
+	at nextflow.script.BindableDef.invoke_a(BindableDef.groovy:51)
+	at nextflow.script.BaseScript.run0(BaseScript.groovy:249)
+	at nextflow.script.BaseScript.run(BaseScript.groovy:260)
+	at nextflow.script.parser.v1.ScriptLoaderV1.runScript(ScriptLoaderV1.groovy:246)
+	at nextflow.script.parser.v1.ScriptLoaderV1.runScript(ScriptLoaderV1.groovy)
+	at nextflow.script.ScriptRunner.run(ScriptRunner.groovy:246)
+	at nextflow.script.ScriptRunner.execute(ScriptRunner.groovy:139)
+	at nextflow.cli.CmdRun.run(CmdRun.groovy:428)
+	at nextflow.cli.Launcher.run(Launcher.groovy:515)
+	at nextflow.cli.Launcher.main(Launcher.groovy:675)
+	Suppressed: groovy.lang.GroovyRuntimeException: Could not find matching constructor for: nextflow.Channel(nextflow.script.ChannelOut)
+		at groovy.lang.MetaClassImpl.invokeConstructor(MetaClassImpl.java:1910)
+		at groovy.lang.MetaClassImpl.invokeConstructor(MetaClassImpl.java:1679)
+		at groovy.lang.DelegatingMetaClass.invokeConstructor(DelegatingMetaClass.java:149)
+		at org.codehaus.groovy.runtime.InvokerHelper.invokeConstructorOf(InvokerHelper.java:676)
+		at org.codehaus.groovy.runtime.typehandling.DefaultTypeTransformation.continueCastOnSAM(DefaultTypeTransformation.java:389)
+		... 24 common frames omitted
+Nov-30 05:03:33.029 [Actor Thread 4] ERROR nextflow.extension.OperatorImpl - @unknown
+nextflow.exception.WorkflowScriptErrorException: Missing --samplesheet file: /farmshare/home/classes/bios/270/data/samplesheet.csv
+	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:321)
+	at nextflow.Nextflow.error(Nextflow.groovy:244)
+	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:321)
+	at Script_be94c2d60b4bb485$_runScript_closure1.doCall(Script_be94c2d60b4bb485:15)
+	at Script_be94c2d60b4bb485$_runScript_closure1.doCall(Script_be94c2d60b4bb485)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
+	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:280)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1007)
+	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:321)
+	at nextflow.extension.OperatorImpl$_ifEmpty_closure30.doCall(OperatorImpl.groovy:1043)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
+	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:280)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1007)
+	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:321)
+	at nextflow.extension.DataflowHelper$3.afterStop(DataflowHelper.groovy:257)
+	at groovyx.gpars.dataflow.operator.DataflowProcessor.fireAfterStop(DataflowProcessor.java:324)
+	at groovyx.gpars.dataflow.operator.DataflowProcessorActor.afterStop(DataflowProcessorActor.java:59)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
+	at groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1339)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1094)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1007)
+	at org.codehaus.groovy.runtime.InvokerHelper.invokePojoMethod(InvokerHelper.java:633)
+	at org.codehaus.groovy.runtime.InvokerHelper.invokeMethod(InvokerHelper.java:624)
+	at groovyx.gpars.actor.Actor.callDynamic(Actor.java:369)
+	at groovyx.gpars.actor.Actor.handleTermination(Actor.java:320)
+	at groovyx.gpars.actor.AbstractLoopingActor$1.handleMessage(AbstractLoopingActor.java:86)
+	at groovyx.gpars.util.AsyncMessagingCore.run(AsyncMessagingCore.java:132)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)

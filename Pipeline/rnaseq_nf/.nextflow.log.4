@@ -1,0 +1,182 @@
+Nov-30 05:14:45.836 [main] DEBUG nextflow.cli.Launcher - $> nextflow run rnaseq.nf -params-file configs/params.yaml -c configs/nextflow.config -profile slurm -resume
+Nov-30 05:14:45.989 [main] DEBUG nextflow.cli.CmdRun - N E X T F L O W  ~  version 25.10.0
+Nov-30 05:14:46.064 [main] DEBUG nextflow.config.ConfigBuilder - User config file: /scratch/users/masarus/repos/BIOS270-AU25/Pipeline/rnaseq_nf/configs/nextflow.config
+Nov-30 05:14:46.065 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /scratch/users/masarus/repos/BIOS270-AU25/Pipeline/rnaseq_nf/configs/nextflow.config
+Nov-30 05:14:46.091 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `slurm`
+Nov-30 05:14:46.774 [main] DEBUG nextflow.config.ConfigBuilder - Available config profiles: [slurm, local]
+Nov-30 05:14:46.822 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; embedded=false; plugins-dir=/home/users/masarus/.nextflow/plugins; core-plugins: nf-amazon@3.4.1,nf-azure@1.20.2,nf-cloudcache@0.5.0,nf-codecommit@0.5.0,nf-console@1.3.0,nf-google@1.23.3,nf-k8s@1.2.2,nf-tower@1.17.1,nf-wave@1.16.1
+Nov-30 05:14:46.835 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+Nov-30 05:14:46.836 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+Nov-30 05:14:46.839 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.12.0 in 'deployment' mode
+Nov-30 05:14:46.853 [main] DEBUG nextflow.util.RetryConfig - Missing nextflow session - using default retry config
+Nov-30 05:14:46.992 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+Nov-30 05:14:46.994 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
+Nov-30 05:14:46.995 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins resolved requirement=[]
+Nov-30 05:14:47.010 [main] DEBUG n.secret.LocalSecretsProvider - Secrets store: /home/users/masarus/.nextflow/secrets/store.json
+Nov-30 05:14:47.013 [main] DEBUG nextflow.secret.SecretsLoader - Discovered secrets providers: [nextflow.secret.LocalSecretsProvider@7ae0cc89] - activable => nextflow.secret.LocalSecretsProvider@7ae0cc89
+Nov-30 05:14:47.016 [main] DEBUG nextflow.cli.CmdRun - Applied DSL=2 from script declaration
+Nov-30 05:14:47.031 [main] DEBUG nextflow.cli.CmdRun - Launching `rnaseq.nf` [cheesy_monod] DSL2 - revision: 3342950302
+Nov-30 05:14:47.078 [main] DEBUG nextflow.Session - Session UUID: 1e62e99d-fbc0-4982-b3f7-9d896fb2476c
+Nov-30 05:14:47.079 [main] DEBUG nextflow.Session - Run name: cheesy_monod
+Nov-30 05:14:47.079 [main] DEBUG nextflow.Session - Executor pool size: 80
+Nov-30 05:14:47.088 [main] DEBUG nextflow.file.FilePorter - File porter settings maxRetries=3; maxTransfers=50; pollTimeout=null
+Nov-30 05:14:47.093 [main] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'FileTransfer' minSize=10; maxSize=240; workQueue=LinkedBlockingQueue[-1]; allowCoreThreadTimeout=false
+Nov-30 05:14:47.113 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 25.10.0 build 10289
+  Created: 22-10-2025 16:26 UTC 
+  System: Linux 6.14.0-27-generic
+  Runtime: Groovy 4.0.28 on OpenJDK 64-Bit Server VM 21.0.9+10-Ubuntu-124.04
+  Encoding: UTF-8 (UTF-8)
+  Process: 4165447@rice-01 [127.0.1.1]
+  CPUs: 80 - Mem: 187.4 GB (15.2 GB) - Swap: 8 GB (6.7 GB)
+Nov-30 05:14:47.377 [main] DEBUG nextflow.Session - Work-dir: /scratch/users/masarus/repos/BIOS270-AU25/Pipeline/rnaseq_nf/work [nfs]
+Nov-30 05:14:47.415 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
+Nov-30 05:14:47.434 [main] DEBUG nextflow.Session - Observer factory (v2): LinObserverFactory
+Nov-30 05:14:47.438 [main] DEBUG nextflow.Session - Observer factory (v2): DefaultObserverFactory
+Nov-30 05:14:47.483 [main] DEBUG nextflow.cache.CacheFactory - Using Nextflow cache factory: nextflow.cache.DefaultCacheFactory
+Nov-30 05:14:47.492 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 81; maxThreads: 1000
+Nov-30 05:14:47.657 [main] DEBUG nextflow.Session - Session start
+Nov-30 05:14:47.674 [main] DEBUG nextflow.Session - Report file already exists: /farmshare/user_data/masarus/repos/BIOS270-AU25/Pipeline/SRP628437_nf/report.html -- enable the 'report.overwrite' option in your config file to overwrite existing files
+nextflow.exception.AbortOperationException: Report file already exists: /farmshare/user_data/masarus/repos/BIOS270-AU25/Pipeline/SRP628437_nf/report.html -- enable the 'report.overwrite' option in your config file to overwrite existing files
+	at nextflow.trace.ReportObserver.onFlowCreate(ReportObserver.groovy:119)
+	at nextflow.Session$_notifyFlowCreate_lambda34.doCall(Session.groovy:1107)
+	at nextflow.Session.notifyEvent(Session.groovy:1151)
+	at nextflow.Session.notifyFlowCreate(Session.groovy:1107)
+	at nextflow.Session.start(Session.groovy:596)
+	at nextflow.script.ScriptRunner.execute(ScriptRunner.groovy:133)
+	at nextflow.cli.CmdRun.run(CmdRun.groovy:428)
+	at nextflow.cli.Launcher.run(Launcher.groovy:515)
+	at nextflow.cli.Launcher.main(Launcher.groovy:675)
+Nov-30 05:14:47.675 [main] DEBUG nextflow.trace.TraceFileObserver - Workflow started -- trace file: /farmshare/user_data/masarus/repos/BIOS270-AU25/Pipeline/SRP628437_nf/trace.txt
+Nov-30 05:14:47.677 [main] DEBUG nextflow.Session - Trace file already exists: /farmshare/user_data/masarus/repos/BIOS270-AU25/Pipeline/SRP628437_nf/trace.txt -- enable the 'trace.overwrite' option in your config file to overwrite existing files
+nextflow.exception.AbortOperationException: Trace file already exists: /farmshare/user_data/masarus/repos/BIOS270-AU25/Pipeline/SRP628437_nf/trace.txt -- enable the 'trace.overwrite' option in your config file to overwrite existing files
+	at nextflow.trace.TraceHelper.newFileWriter(TraceHelper.groovy:67)
+	at nextflow.trace.TraceFileObserver.onFlowCreate(TraceFileObserver.groovy:174)
+	at nextflow.Session$_notifyFlowCreate_lambda34.doCall(Session.groovy:1107)
+	at nextflow.Session.notifyEvent(Session.groovy:1151)
+	at nextflow.Session.notifyFlowCreate(Session.groovy:1107)
+	at nextflow.Session.start(Session.groovy:596)
+	at nextflow.script.ScriptRunner.execute(ScriptRunner.groovy:133)
+	at nextflow.cli.CmdRun.run(CmdRun.groovy:428)
+	at nextflow.cli.Launcher.run(Launcher.groovy:515)
+	at nextflow.cli.Launcher.main(Launcher.groovy:675)
+Caused by: java.nio.file.FileAlreadyExistsException: /farmshare/user_data/masarus/repos/BIOS270-AU25/Pipeline/SRP628437_nf/trace.txt
+	at java.base/sun.nio.fs.UnixException.translateToIOException(UnixException.java:94)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:106)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:111)
+	at java.base/sun.nio.fs.UnixFileSystemProvider.newByteChannel(UnixFileSystemProvider.java:261)
+	at java.base/java.nio.file.spi.FileSystemProvider.newOutputStream(FileSystemProvider.java:482)
+	at java.base/java.nio.file.Files.newOutputStream(Files.java:228)
+	at java.base/java.nio.file.Files.newBufferedWriter(Files.java:3001)
+	at nextflow.trace.TraceHelper.newFileWriter(TraceHelper.groovy:64)
+	... 9 common frames omitted
+Nov-30 05:14:47.937 [main] DEBUG nextflow.script.ScriptRunner - Parsed script files:
+Nov-30 05:14:47.950 [main] DEBUG n.trace.WorkflowStatsObserver - Workflow completed > WorkflowStats[succeededCount=0; failedCount=0; ignoredCount=0; cachedCount=0; pendingCount=0; submittedCount=0; runningCount=0; retriesCount=0; abortedCount=0; succeedDuration=0ms; failedDuration=0ms; cachedDuration=0ms;loadCpus=0; loadMemory=0; peakRunning=0; peakCpus=0; peakMemory=0; ]
+Nov-30 05:14:48.073 [main] DEBUG nextflow.trace.ReportObserver - Workflow completed -- rendering execution report
+Nov-30 05:14:48.784 [main] WARN  nextflow.trace.ReportObserver - Failed to render execution report -- see the log file for details
+nextflow.exception.AbortOperationException: Report file already exists: /farmshare/user_data/masarus/repos/BIOS270-AU25/Pipeline/SRP628437_nf/report.html -- enable the 'report.overwrite' option in your config file to overwrite existing files
+	at nextflow.trace.TraceHelper.newFileWriter(TraceHelper.groovy:67)
+	at nextflow.trace.ReportObserver.renderHtml(ReportObserver.groovy:243)
+	at nextflow.trace.ReportObserver.onFlowComplete(ReportObserver.groovy:129)
+	at nextflow.Session$_notifyFlowComplete_lambda39.doCall(Session.groovy:1121)
+	at nextflow.Session.notifyEvent(Session.groovy:1151)
+	at nextflow.Session.notifyFlowComplete(Session.groovy:1121)
+	at nextflow.Session.shutdown0(Session.groovy:779)
+	at nextflow.Session.abort(Session.groovy:834)
+	at nextflow.script.ScriptRunner.execute(ScriptRunner.groovy:150)
+	at nextflow.cli.CmdRun.run(CmdRun.groovy:428)
+	at nextflow.cli.Launcher.run(Launcher.groovy:515)
+	at nextflow.cli.Launcher.main(Launcher.groovy:675)
+Caused by: java.nio.file.FileAlreadyExistsException: /farmshare/user_data/masarus/repos/BIOS270-AU25/Pipeline/SRP628437_nf/report.html
+	at java.base/sun.nio.fs.UnixException.translateToIOException(UnixException.java:94)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:106)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:111)
+	at java.base/sun.nio.fs.UnixFileSystemProvider.newByteChannel(UnixFileSystemProvider.java:261)
+	at java.base/java.nio.file.spi.FileSystemProvider.newOutputStream(FileSystemProvider.java:482)
+	at java.base/java.nio.file.Files.newOutputStream(Files.java:228)
+	at java.base/java.nio.file.Files.newBufferedWriter(Files.java:3001)
+	at nextflow.trace.TraceHelper.newFileWriter(TraceHelper.groovy:64)
+	... 11 common frames omitted
+Nov-30 05:14:48.786 [main] DEBUG nextflow.trace.TraceFileObserver - Workflow completed -- saving trace file
+Nov-30 05:14:48.786 [main] DEBUG nextflow.Session - Cannot invoke "groovyx.gpars.agent.Agent.await()" because "this.writer" is null
+java.lang.NullPointerException: Cannot invoke "groovyx.gpars.agent.Agent.await()" because "this.writer" is null
+	at nextflow.trace.TraceFileObserver.onFlowComplete(TraceFileObserver.groovy:189)
+	at nextflow.Session$_notifyFlowComplete_lambda39.doCall(Session.groovy:1121)
+	at nextflow.Session.notifyEvent(Session.groovy:1151)
+	at nextflow.Session.notifyFlowComplete(Session.groovy:1121)
+	at nextflow.Session.shutdown0(Session.groovy:779)
+	at nextflow.Session.abort(Session.groovy:834)
+	at nextflow.script.ScriptRunner.execute(ScriptRunner.groovy:150)
+	at nextflow.cli.CmdRun.run(CmdRun.groovy:428)
+	at nextflow.cli.Launcher.run(Launcher.groovy:515)
+	at nextflow.cli.Launcher.main(Launcher.groovy:675)
+Nov-30 05:14:48.790 [main] ERROR nextflow.cli.Launcher - Script compilation error
+- file : /scratch/users/masarus/repos/BIOS270-AU25/Pipeline/rnaseq_nf/rnaseq.nf
+- cause: Unexpected input: '{\n    \n    // 1. **Index Preparation Logic: Use a function/sub-workflow or simple flow for robustness**\n    \n    Channel index_path_ch\n    \n    // Case 1: Existing index provided (Simplest case)\n    if (params.index) {\n        index_path_ch = Channel.value( file(params.index) )\n    }\n    // Case 2: Transcriptome provided (Requires running SALMON_INDEX)\n    else if (params.transcriptome) {\n        log.info "No index provided. Running SALMON_INDEX using: ${params.transcriptome}"\n        \n        // Define input channel for the FASTA file\n        fasta_ch = Channel.value( file(params.transcriptome) )\n        \n        // Run the indexing process\n        SALMON_INDEX(fasta_ch)\n        \n        // **CRUCIAL FIX:** Assign the output *inside* the else block.\n        // If this still fails, the last resort is to use a dedicated sub-workflow.\n        index_path_ch = SALMON_INDEX.out \n    }\n    // Case 3: Error (No index or transcriptome)\n    else {\n        error "Configuration Error: You must provide either 'params.index' or 'params.transcriptome'."\n    }\n    \n    // --------------------------------------------------------------------------------------\n    \n    // 2. **QC and Trimming**\n    FASTQC(samples_ch)\n    trimmed_ch = TRIMGALORE(samples_ch)\n\n    // 3. **Quantification**\n    // Pass the index path channel to SALMON, combining the multiple read samples\n    quant_ch = SALMON(trimmed_ch.combine(index_path_ch))        \n    // Run DESeq2 using the aggregated quantification file and the original samplesheet.\n    DESEQ2(quant_paths_ch, samplesheet_ch)\n    }\n}' @ line 85, column 1.
+   }
+   ^
+
+1 error
+
+nextflow.exception.ScriptCompilationException: Script compilation error
+- file : /scratch/users/masarus/repos/BIOS270-AU25/Pipeline/rnaseq_nf/rnaseq.nf
+- cause: Unexpected input: '{\n    \n    // 1. **Index Preparation Logic: Use a function/sub-workflow or simple flow for robustness**\n    \n    Channel index_path_ch\n    \n    // Case 1: Existing index provided (Simplest case)\n    if (params.index) {\n        index_path_ch = Channel.value( file(params.index) )\n    }\n    // Case 2: Transcriptome provided (Requires running SALMON_INDEX)\n    else if (params.transcriptome) {\n        log.info "No index provided. Running SALMON_INDEX using: ${params.transcriptome}"\n        \n        // Define input channel for the FASTA file\n        fasta_ch = Channel.value( file(params.transcriptome) )\n        \n        // Run the indexing process\n        SALMON_INDEX(fasta_ch)\n        \n        // **CRUCIAL FIX:** Assign the output *inside* the else block.\n        // If this still fails, the last resort is to use a dedicated sub-workflow.\n        index_path_ch = SALMON_INDEX.out \n    }\n    // Case 3: Error (No index or transcriptome)\n    else {\n        error "Configuration Error: You must provide either 'params.index' or 'params.transcriptome'."\n    }\n    \n    // --------------------------------------------------------------------------------------\n    \n    // 2. **QC and Trimming**\n    FASTQC(samples_ch)\n    trimmed_ch = TRIMGALORE(samples_ch)\n\n    // 3. **Quantification**\n    // Pass the index path channel to SALMON, combining the multiple read samples\n    quant_ch = SALMON(trimmed_ch.combine(index_path_ch))        \n    // Run DESeq2 using the aggregated quantification file and the original samplesheet.\n    DESEQ2(quant_paths_ch, samplesheet_ch)\n    }\n}' @ line 85, column 1.
+   }
+   ^
+
+1 error
+
+	at nextflow.script.parser.v1.ScriptLoaderV1.parse0(ScriptLoaderV1.groovy:204)
+	at nextflow.script.parser.v1.ScriptLoaderV1.parse(ScriptLoaderV1.groovy:215)
+	at nextflow.script.parser.v1.ScriptLoaderV1.parse(ScriptLoaderV1.groovy)
+	at nextflow.script.ScriptRunner.parseScript(ScriptRunner.groovy:232)
+	at nextflow.script.ScriptRunner.execute(ScriptRunner.groovy:137)
+	at nextflow.cli.CmdRun.run(CmdRun.groovy:428)
+	at nextflow.cli.Launcher.run(Launcher.groovy:515)
+	at nextflow.cli.Launcher.main(Launcher.groovy:675)
+Caused by: org.codehaus.groovy.control.MultipleCompilationErrorsException: startup failed:
+Script_96e2a0ed290003af: 85: Unexpected input: '{\n    \n    // 1. **Index Preparation Logic: Use a function/sub-workflow or simple flow for robustness**\n    \n    Channel index_path_ch\n    \n    // Case 1: Existing index provided (Simplest case)\n    if (params.index) {\n        index_path_ch = Channel.value( file(params.index) )\n    }\n    // Case 2: Transcriptome provided (Requires running SALMON_INDEX)\n    else if (params.transcriptome) {\n        log.info "No index provided. Running SALMON_INDEX using: ${params.transcriptome}"\n        \n        // Define input channel for the FASTA file\n        fasta_ch = Channel.value( file(params.transcriptome) )\n        \n        // Run the indexing process\n        SALMON_INDEX(fasta_ch)\n        \n        // **CRUCIAL FIX:** Assign the output *inside* the else block.\n        // If this still fails, the last resort is to use a dedicated sub-workflow.\n        index_path_ch = SALMON_INDEX.out \n    }\n    // Case 3: Error (No index or transcriptome)\n    else {\n        error "Configuration Error: You must provide either 'params.index' or 'params.transcriptome'."\n    }\n    \n    // --------------------------------------------------------------------------------------\n    \n    // 2. **QC and Trimming**\n    FASTQC(samples_ch)\n    trimmed_ch = TRIMGALORE(samples_ch)\n\n    // 3. **Quantification**\n    // Pass the index path channel to SALMON, combining the multiple read samples\n    quant_ch = SALMON(trimmed_ch.combine(index_path_ch))        \n    // Run DESeq2 using the aggregated quantification file and the original samplesheet.\n    DESEQ2(quant_paths_ch, samplesheet_ch)\n    }\n}' @ line 85, column 1.
+   }
+   ^
+
+1 error
+
+	at org.codehaus.groovy.control.ErrorCollector.failIfErrors(ErrorCollector.java:292)
+	at org.codehaus.groovy.control.ErrorCollector.addFatalError(ErrorCollector.java:148)
+	at org.apache.groovy.parser.antlr4.AstBuilder.collectSyntaxError(AstBuilder.java:4739)
+	at org.apache.groovy.parser.antlr4.AstBuilder.access$100(AstBuilder.java:169)
+	at org.apache.groovy.parser.antlr4.AstBuilder$3.syntaxError(AstBuilder.java:4750)
+	at groovyjarjarantlr4.v4.runtime.ProxyErrorListener.syntaxError(ProxyErrorListener.java:44)
+	at groovyjarjarantlr4.v4.runtime.Parser.notifyErrorListeners(Parser.java:543)
+	at groovyjarjarantlr4.v4.runtime.DefaultErrorStrategy.notifyErrorListeners(DefaultErrorStrategy.java:154)
+	at org.apache.groovy.parser.antlr4.internal.DescriptiveErrorStrategy.reportNoViableAlternative(DescriptiveErrorStrategy.java:92)
+	at groovyjarjarantlr4.v4.runtime.DefaultErrorStrategy.reportError(DefaultErrorStrategy.java:139)
+	at org.apache.groovy.parser.antlr4.GroovyParser.pathExpression(GroovyParser.java:9897)
+	at org.apache.groovy.parser.antlr4.GroovyParser.postfixExpression(GroovyParser.java:8274)
+	at org.apache.groovy.parser.antlr4.GroovyParser.expression(GroovyParser.java:9061)
+	at org.apache.groovy.parser.antlr4.GroovyParser.commandExpression(GroovyParser.java:9699)
+	at org.apache.groovy.parser.antlr4.GroovyParser.statementExpression(GroovyParser.java:8233)
+	at org.apache.groovy.parser.antlr4.GroovyParser.statement(GroovyParser.java:7078)
+	at org.apache.groovy.parser.antlr4.GroovyParser.scriptStatement(GroovyParser.java:517)
+	at org.apache.groovy.parser.antlr4.GroovyParser.scriptStatements(GroovyParser.java:427)
+	at org.apache.groovy.parser.antlr4.GroovyParser.compilationUnit(GroovyParser.java:363)
+	at org.apache.groovy.parser.antlr4.AstBuilder.buildCST(AstBuilder.java:243)
+	at org.apache.groovy.parser.antlr4.AstBuilder.buildCST(AstBuilder.java:221)
+	at org.apache.groovy.parser.antlr4.AstBuilder.buildAST(AstBuilder.java:262)
+	at org.apache.groovy.parser.antlr4.Antlr4ParserPlugin.buildAST(Antlr4ParserPlugin.java:58)
+	at org.codehaus.groovy.control.SourceUnit.buildAST(SourceUnit.java:256)
+	at java.base/java.util.Iterator.forEachRemaining(Iterator.java:133)
+	at java.base/java.util.Spliterators$IteratorSpliterator.forEachRemaining(Spliterators.java:1939)
+	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:762)
+	at org.codehaus.groovy.control.CompilationUnit.compile(CompilationUnit.java:631)
+	at groovy.lang.GroovyClassLoader.doParseClass(GroovyClassLoader.java:365)
+	at groovy.lang.GroovyClassLoader.lambda$parseClass$2(GroovyClassLoader.java:314)
+	at org.codehaus.groovy.runtime.memoize.StampedCommonCache.compute(StampedCommonCache.java:163)
+	at org.codehaus.groovy.runtime.memoize.StampedCommonCache.getAndPut(StampedCommonCache.java:154)
+	at groovy.lang.GroovyClassLoader.parseClass(GroovyClassLoader.java:314)
+	at groovy.lang.GroovyShell.parseClass(GroovyShell.java:572)
+	at groovy.lang.GroovyShell.parse(GroovyShell.java:585)
+	at groovy.lang.GroovyShell.parse(GroovyShell.java:639)
+	at groovy.lang.GroovyShell.parse(GroovyShell.java:643)
+	at nextflow.script.parser.v1.ScriptLoaderV1.parse0(ScriptLoaderV1.groovy:183)
+	... 7 common frames omitted
