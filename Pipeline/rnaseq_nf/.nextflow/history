@@ -1,0 +1,10 @@
+2025-11-30 04:59:36	-	goofy_mahavira	-	74e9c3e9034e9cf82ff6b11fdd67451f	1e62e99d-fbc0-4982-b3f7-9d896fb2476c	nextflow run rnaseq.nf -params-file configs/params.yaml -c configs/nextflow.config -profile slurm -resume
+2025-11-30 05:03:30	-	mad_leavitt	-	b2d1d5ac9efd933c922b3c70d2bda55c	1e62e99d-fbc0-4982-b3f7-9d896fb2476c	nextflow run rnaseq.nf -params-file configs/params.yaml -c configs/nextflow.config -profile slurm -resume
+2025-11-30 05:05:16	-	cheesy_wegener	-	bb14882114169bfe4888c7e82eaeac86	1e62e99d-fbc0-4982-b3f7-9d896fb2476c	nextflow run rnaseq.nf -params-file configs/params.yaml -c configs/nextflow.config -profile slurm -resume
+2025-11-30 05:09:07	-	mad_linnaeus	-	c1597bf135b31222ce56a1893555dc1c	1e62e99d-fbc0-4982-b3f7-9d896fb2476c	nextflow run rnaseq.nf -params-file configs/params.yaml -c configs/nextflow.config -profile slurm -resume
+2025-11-30 05:12:16	-	extravagant_golick	-	c1597bf135b31222ce56a1893555dc1c	1e62e99d-fbc0-4982-b3f7-9d896fb2476c	nextflow run rnaseq.nf -params-file configs/params.yaml -c configs/nextflow.config -profile slurm -resume
+2025-11-30 05:14:47	-	cheesy_monod	-	3342950302daf4024727230495f0b2cb	1e62e99d-fbc0-4982-b3f7-9d896fb2476c	nextflow run rnaseq.nf -params-file configs/params.yaml -c configs/nextflow.config -profile slurm -resume
+2025-11-30 05:15:29	-	boring_mahavira	-	234463d8ed082b6c5e6bb99ec2df716e	1e62e99d-fbc0-4982-b3f7-9d896fb2476c	nextflow run rnaseq.nf -params-file configs/params.yaml -c configs/nextflow.config -profile slurm -resume
+2025-11-30 05:18:31	-	focused_poincare	-	f324175971b5f119e25930b2892f8fdb	1e62e99d-fbc0-4982-b3f7-9d896fb2476c	nextflow run rnaseq.nf -params-file configs/params.yaml -c configs/nextflow.config -profile slurm -resume
+2025-11-30 05:22:09	-	tiny_baekeland	-	47e2408d9bd6822093a08d53fccbe194	1e62e99d-fbc0-4982-b3f7-9d896fb2476c	nextflow run rnaseq.nf -params-file configs/params.yaml -c configs/nextflow.config -profile slurm -resume
+2025-11-30 05:24:07	-	scruffy_stone	-	a752c0c46f7c0efe20d4bcd09dddb3e5	1e62e99d-fbc0-4982-b3f7-9d896fb2476c	nextflow run rnaseq.nf -params-file configs/params.yaml -c configs/nextflow.config -profile slurm -resume
