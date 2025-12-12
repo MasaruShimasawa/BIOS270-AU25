@@ -6,6 +6,10 @@ from align import compute_alignment, alignment_stats
 
 # ---------------- Streamlit App ----------------
 st.set_page_config(page_title="Pairwise Sequence Aligner", layout="wide")
+
+# TODO: Add a logo or image above the title, replace with your favorite image
+st.image("https://raw.githubusercontent.com/MasaruShimasawa/BIOS270-AU25/main/Writeups/writeup0/Bintu-Lab-Logo-Inverted-05-2048x326.png", width=150)
+
 st.title("Pairwise Sequence Aligner")
 
 st.markdown(
@@ -102,6 +106,9 @@ if align_clicked:
                 file_name="alignment.txt",
                 mime="text/plain",
             )
+            # TODO: Find an appropriate location in `app.py` to insert this code
+            fig = px.histogram(vals, nbins=10, title="Distribution of Match Values (Match=1, Mismatch=0)")
+            st.plotly_chart(fig, use_container_width=True)
         except Exception as e:
             st.error(f"Alignment failed: {e}")
             st.exception(e)
