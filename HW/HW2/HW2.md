@@ -54,7 +54,7 @@ align_clicked = st.button("▶️ Align sequences")
 
 - [ ] The app runs this line only once when first loaded and won't rerun it.  
 - [ ] The app waits (pauses) until the user clicks the button before continuing.  
-- [ ] When the user clicks the button, Streamlit reruns the entire script from the top, and `align_clicked` becomes `True` for that run, allowing the code inside `if align_clicked:` to execute.  
+- [x] When the user clicks the button, Streamlit reruns the entire script from the top, and `align_clicked` becomes `True` for that run, allowing the code inside `if align_clicked:` to execute.  
 
 ---
 
@@ -63,7 +63,7 @@ Why do we use:
 ```python
 st.plotly_chart(fig, use_container_width=True)
 ```
-- [ ] It makes the chart automatically scale to fit the available page width.  
+- [x] It makes the chart automatically scale to fit the available page width.  
 - [ ] It forces Streamlit to display a smaller chart.  
 - [ ] It changes how Plotly computes data ranges.  
 
@@ -92,6 +92,6 @@ Then, copy and paste your **Streamlit Cloud URL** below
 
 ```
 Streamlit App URL:
-https://____________________________________
+https://bios270-au25-kxwepqxa4uf9c3bgn5dphx.streamlit.app
 ```
 Submit the `HW2.md` URL to **Canvas**.
